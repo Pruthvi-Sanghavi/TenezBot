@@ -37,7 +37,7 @@
 #    OPTIONAL deploy
 #    OPTIONAL after_deploy
 
-################################################################################
+
 dist: xenial
 sudo: required
 cache: apt
@@ -53,7 +53,6 @@ env:
     - CATKIN_OPTIONS=$CI_SOURCE_PATH/catkin.options
     - ROS_PARALLEL_JOBS='-j8 -l6'
 
-################################################################################
 
 # Install system dependencies, namely a very barebones ROS setup.
 before_install:
@@ -132,6 +131,6 @@ after_success:
 notifications:
   email: 
     recipients:
-      - pruthvi@umd.edu
+      - pruthvisanghavi1997@gmail.com
     on_success: always # default: change
 on_failure: always # default: always
