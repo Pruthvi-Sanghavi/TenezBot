@@ -38,7 +38,7 @@ The robot would perform the following steps to complete its task
 
 
 ## Project Demo
-
+![Alt Text](https://drive.google.com/open?id=16ZPN-cC5ia5kIT59fHRLWBl1iRF6Wc8J)
 
 
 
@@ -49,8 +49,8 @@ The robot would perform the following steps to complete its task
 
 ## Video Demo
 
-- Video Presentation: [link]()
-- Presentation: [link]()
+- Video Presentation: [link](https://drive.google.com/open?id=16ZPN-cC5ia5kIT59fHRLWBl1iRF6Wc8J)
+- Presentation: [link](https://drive.google.com/open?id=155_GFJH2JAP7qsZj5m145zeNFpTQVBx8teyoY8T2POA)
 
 ## About the Developers
 
