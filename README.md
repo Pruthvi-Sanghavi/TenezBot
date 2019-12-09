@@ -1,8 +1,8 @@
 # TenezBot :: A Tennis Ball Collecting Robot
 
-[![Build Status](https://travis-ci.org/Pruthvi-Sanghavi/TenezBot.svg?branch=iteration_3)](https://travis-ci.org/Pruthvi-Sanghavi/TenezBot)
+[![Build Status](https://travis-ci.org/Pruthvi-Sanghavi/TenezBot.svg?branch=master)](https://travis-ci.org/Pruthvi-Sanghavi/TenezBot)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-[![Coverage Status](https://coveralls.io/repos/github/Pruthvi-Sanghavi/TenezBot/badge.svg?branch=iteration_3)](https://coveralls.io/github/Pruthvi-Sanghavi/TenezBot?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Pruthvi-Sanghavi/TenezBot/badge.svg?branch=master)](https://coveralls.io/github/Pruthvi-Sanghavi/TenezBot?branch=master)
 
 ## Overview
 
