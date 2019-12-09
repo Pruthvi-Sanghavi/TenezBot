@@ -38,25 +38,22 @@
 *@brief  Functions definitions for turtlebot class
 */
 
-#include <geometry_msgs/Twist.h>
+#include <math.h>
 #include <vector>
 #include "ros/ros.h"
 #include "ros/console.h"
 #include "turtlebot.hpp"
 #include "tenezbot/pos.h"
-#include <geometry_msgs/Twist.h>
-#include <math.h>
-
+#include "geometry_msgs/Twist.h"
 void turtlebot::dir_sub(tenezbot::pos msg) {
     turtlebot::dir = msg.direction;
 }
 
 void turtlebot::mobile_base(geometry_msgs::Twist &move,
  ros::Publisher &movement_pub, ros::Rate &rate) {
-    
     if (turtlebot::dir == 3) {
       ros::Time start_turn = ros::Time::now();
-      while(ros::Time::now() - start_turn < ros::Duration(2))
+      while (ros::Time::now() - start_turn < ros::Duration(2))
         geometry_msgs::Twist move;
         move.linear.x = 0;
         move.angular.z = 0.3;
@@ -68,7 +65,7 @@ void turtlebot::mobile_base(geometry_msgs::Twist &move,
 
     if (turtlebot::dir == 2) {
       ros::Time start_turn = ros::Time::now();
-      while(ros::Time::now() - start_turn < ros::Duration(1.0))
+      while (ros::Time::now() - start_turn < ros::Duration(1.0))
         geometry_msgs::Twist move;
         move.linear.x = 0.1;
         move.angular.z = -0.15;
@@ -79,7 +76,7 @@ void turtlebot::mobile_base(geometry_msgs::Twist &move,
 
     if (turtlebot::dir == 1) {
       ros::Time start_turn = ros::Time::now();
-      while(ros::Time::now() - start_turn < ros::Duration(1.0))
+      while (ros::Time::now() - start_turn < ros::Duration(1.0))
         geometry_msgs::Twist move;
         move.linear.x = 0.5;
         move.angular.z = 0;
@@ -90,7 +87,7 @@ void turtlebot::mobile_base(geometry_msgs::Twist &move,
 
     if (turtlebot::dir == 0) {
       ros::Time start_turn = ros::Time::now();
-      while(ros::Time::now() - start_turn < ros::Duration(1.0))
+      while (ros::Time::now() - start_turn < ros::Duration(1.0))
         geometry_msgs::Twist move;
         move.linear.x = 0.1;
         move.angular.z = 0.15;
@@ -98,5 +95,4 @@ void turtlebot::mobile_base(geometry_msgs::Twist &move,
         rate.sleep();
         ROS_INFO_STREAM("turning left");
     }
-    
 }

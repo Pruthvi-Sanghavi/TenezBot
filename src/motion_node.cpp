@@ -37,6 +37,7 @@
 *@license BSD 3-Clause
 *@brief  Ros node to read direction to move in and publish velocity to turtlebot
 */
+#include <math.h>
 #include <cv_bridge/cv_bridge.h>
 #include <cstdlib>
 #include <string>
@@ -46,8 +47,8 @@
 #include "ros/console.h"
 #include "turtlebot.hpp"
 #include "tenezbot/pos.h"
-#include <geometry_msgs/Twist.h>
-#include <math.h>
+#include "geometry_msgs/Twist.h"
+
 
 
 /**
@@ -68,7 +69,8 @@ int main(int argc, char **argv) {
     ros::Subscriber sub = n.subscribe("/direction",
         1, &turtlebot::dir_sub, &bot);
 
-    ros::Publisher movement_pub = n.advertise<geometry_msgs::Twist>("mobile_base/commands/velocity",10);
+    ros::Publisher movement_pub = n.advertise<geometry_msgs::Twist>
+    ("mobile_base/commands/velocity", 10);
     ros::Rate rate(10);
     while (ros::ok()) {
         ros::spinOnce();

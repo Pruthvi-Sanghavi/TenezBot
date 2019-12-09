@@ -137,7 +137,6 @@ int BallDetect::colorthresh(cv::Mat input) {
     BallDetect::dir = 3;
   }
   // Output images viewed by the turtlebot
-  
   cv::namedWindow("HSVImage");
   cv::namedWindow("Turtlebot View");
   imshow("HSVImage", img_hsv);

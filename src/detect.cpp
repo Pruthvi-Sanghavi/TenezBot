@@ -37,6 +37,7 @@
 *@license BSD 3-Clause
 *@brief  Ros Nod to subscribe to turtlebot images and perform image processing to detect ball
 */
+#include <math.h>
 #include <cv_bridge/cv_bridge.h>
 #include <cstdlib>
 #include <string>
@@ -46,8 +47,8 @@
 #include "ros/console.h"
 #include "balldetect.hpp"
 #include "tenezbot/pos.h"
-#include <geometry_msgs/Twist.h>
-#include <math.h>
+#include "geometry_msgs/Twist.h"
+
 
 /**
  *@brief Main function that reads image from the turtlebot and provides direction to move using image processing
