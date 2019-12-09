@@ -33,8 +33,7 @@ if(CATKIN_ENABLE_TESTING)
   find_package(rostest REQUIRED)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 --coverage")
 
-  add_rostest_gtest(test_detection test/test_detect.launch test/test_detect.cpp src/balldetect.cpp)
-  target_link_libraries(test_detection ${catkin_LIBRARIES} ${OpenCV_LIBS})
+ 
 
   add_rostest_gtest(test_velocity test/test_navig.launch test/test_navig.cpp src/turtlebot.cpp)
   target_link_libraries(test_velocity ${catkin_LIBRARIES} ${OpenCV_LIBS})
