@@ -53,10 +53,10 @@
 */
 class BallDetect {
  public:
-    cv::Mat img;  /// Input image in opencv matrix format
-    cv::Mat img_filt; /// Filtered image in opencv matrix format
+    cv::Mat img;  // Input image in opencv matrix format
+    cv::Mat img_filt;  //  Filtered image in opencv matrix format
     cv::Mat img_mask;
-    int dir;  /// Direction message to be published
+    int dir;  // Direction message to be published
 /**
 *@brief Callback used to subscribe to the image topic from the Turtlebot and convert to opencv image format
 *@param msg is the image message for ROS
@@ -79,7 +79,5 @@ class BallDetect {
  private:
     cv::Scalar LowerRed;
     cv::Scalar UpperRed;
-    cv::Mat img_hsv;
-    
-};
+    cv::Mat img_hsv; };
 #endif  // INCLUDE_BALLDETECT_HPP_
