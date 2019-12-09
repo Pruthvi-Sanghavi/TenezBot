@@ -8,6 +8,8 @@
 
 We propose to design "TenezBot" a tennis ball collecting robot, by incorporating high-quality software engineering practices for Acme Robotics. "TenezBot" package is a complete software package which will be integrated in their new line of products. Tennis is played widely throughout the world. Mastering this game requires a good amount of time. But with that comes the demanding task of collecting hundreds of tennis balls scattered across the court, which becomes really frustrating after a tiring practice session. Thus we are aiming to develop “TenezBot” a robot which can detect ball, its position in the environment, reach out to the ball and collect it in a sac using a custom made collector attached with the TurtleBot base platform. The robot would use vision camera for vision and depth measurement. Path planning algorithms are used to reach out to the balls so that the task performance is optimum.
 
+![Alt Text](https://github.com/Pruthvi-Sanghavi/TenezBot/blob/iteration_3/demo/demo.gif)
+
 ## Package Deliverables
 
 This software package contains:
@@ -155,44 +157,9 @@ rosbag play tenezbot.bag
 
 ## Run Tests
 ```
+cd <workspace>
 catkin_make run_tests	
 
-```
-
-
-
-## Code Coverage
-
-![Code coverage](https://img.shields.io/badge/coverage-93.3%25-green.svg)
-
-(NOTE: THIS IS A SELF GENERATED TAG, not to be confused with the automatic generated tag from coveralls.)
-
-Since there is currently some issue with coveralls picking up the build from travis and checking for code coverage, provided below is a screen shot of the coverage report generated using lcov, locally.
-For the Source Files, the Code Coverage Report is:
-![code_coverage](additional_files/lcov_coverage_1.png)
-For the Test Files, the Code Coverage Report is:
-![code_coverage](additional_files/lcov_coverage_2.png)
-
-To run code coverage, you need lcov package. If this package is not installed, then to install the package, run the following command:
-```
-sudo apt-get install lcov
-```
-
-To do so, run the following commands:
-```
-source ~/catkin_ws/devel/setup.bash
-roslaunch iiwa_moveit moveit_planning_execution.launch
-```
-You can still give the arguments to this launch file as stated in the "[Playing the bag File](#playing-the-bag-file-generated-to-observe-robot-motion)" section.
-
-Now, in a new terminal, to generate code coverage, run the following command:
-```
-catkin_make code_coverage
-```
-To view the code coverage report generated, run the following commands:
-```
-cd ~/catkin_ws/build/coverage/
-firefox index.html
 ```
 
 ## Plugins
@@ -260,8 +227,9 @@ firefox index.html
 ```
 ## Known Issues/Bugs
 
-
-
+- Ball color is fixed.
+- Ball collection requires a speacial mechanism. It can be demonstrated by making the balls to disappear using ros service.
+- Robot has a limited depth and vision.
 
 
 
@@ -299,7 +267,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
-## Disclaimer
+
 
 
 
