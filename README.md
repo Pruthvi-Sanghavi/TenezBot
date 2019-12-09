@@ -8,7 +8,7 @@
 
 We propose to design "TenezBot" a tennis ball collecting robot, by incorporating high-quality software engineering practices for Acme Robotics. "TenezBot" package is a complete software package which will be integrated in their new line of products. Tennis is played widely throughout the world. Mastering this game requires a good amount of time. But with that comes the demanding task of collecting hundreds of tennis balls scattered across the court, which becomes really frustrating after a tiring practice session. Thus we are aiming to develop “TenezBot” a robot which can detect ball, its position in the environment, reach out to the ball and collect it in a sac using a custom made collector attached with the TurtleBot base platform. The robot would use vision camera for vision and depth measurement. Path planning algorithms are used to reach out to the balls so that the task performance is optimum.
 
-![Alt Text](https://github.com/Pruthvi-Sanghavi/TenezBot/blob/iteration_3/demo/demo.gif)
+![Alt Text](https://github.com/Pruthvi-Sanghavi/TenezBot/blob/master/demo/demo.gif)
 
 ## Package Deliverables
 
@@ -35,11 +35,6 @@ The robot would perform the following steps to complete its task
 - Plan the path from the current position to the ball position coordinate.
 - Reach the ball coordinate and collect the ball in sac.
 - Calculate the distance to the other nearest Ball.
-
-
-## Project Demo
-![Alt Text](https://drive.google.com/open?id=16ZPN-cC5ia5kIT59fHRLWBl1iRF6Wc8J)
-
 
 
 ## Agile Iterative Process (AIP)
