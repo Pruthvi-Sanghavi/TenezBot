@@ -80,11 +80,7 @@ exit()
 ```
 
 ## ROS Dependencies
-
-
-
-
-
+CV_Bridge
 
 ## Creating Workspace and Package
 
@@ -158,9 +154,10 @@ rosbag play tenezbot.bag
 ```
 
 ## Run Tests
+```
+catkin_make run_tests	
 
-
-
+```
 
 
 
