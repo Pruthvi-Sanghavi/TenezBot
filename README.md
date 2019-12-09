@@ -47,7 +47,7 @@ The robot would perform the following steps to complete its task:
 - Git 2.7.4
 - Opencv [link](https://opencv.org/)
 - ROS Navigation stack
-- ROS Geometry MOdules
+- ROS Geometry Modules
 - Gtest
 
 ## Outline of ROS Messages and Services
@@ -56,16 +56,23 @@ The robot would perform the following steps to complete its task:
 ## Build, Test and Run Instructions
 
 ### Building Workspace and Packages
-
+Open a terminal
 ```
-
+mkdir -p ~/<workspace>/src
+cd <workspace>/src
+git clone https://github.com/Achalpvyas/TenezBot.git
+cd ..
+catkin_make
+source devel/setup.bash
 
 ```
 
 ### Running the packages
-
+Open a terminal
 ```
-
+cd <workspace>
+source devel/setup.bash
+roslaunch tenezbot tenezbot.launch
 
 ```
 
@@ -88,6 +95,8 @@ The robot would perform the following steps to complete its task:
 ### Known Bugs/Issues
 
 ```
+The robot is not able to detect the balls.
+The robot is rotating about its location and not moving towards the balls as it can't detect the balls.
 
 
 ```
@@ -101,9 +110,20 @@ The robot would perform the following steps to complete its task:
 
 ## Graphics/Videos/GIFS as demo and project promotion
 
-```
+
+![Alt Text](https://github.com/Achalpvyas/TenezBot/blob/master/demo/tenezbot.gif)
+
+## Deliverables
 
 
-```
+The deliverable we will be providing with this package are:
+- C++ Codes
+- Dependent Software Packages
+- World file: Tennis court
+- Demo files - rqt graphs, visualisation tools, Recorded Bag Files (Showing simulation of the robot
+  collecting balls in the tennis court)
+- Instruction manual - Building, Testing, Running, Recording and Playing and Hardware
+  Implementation (Micro -Processor) instructions
+
 
 
