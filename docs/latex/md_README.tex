@@ -1,0 +1,267 @@
+\href{https://travis-ci.org/Pruthvi-Sanghavi/TenezBot}{\tt } \href{https://opensource.org/licenses/BSD-3-Clause}{\tt } \href{https://coveralls.io/github/Pruthvi-Sanghavi/TenezBot?branch=master}{\tt }
+
+\subsection*{Overview}
+
+We propose to design \char`\"{}\+Tenez\+Bot\char`\"{} a tennis ball collecting robot, by incorporating high-\/quality software engineering practices for Acme Robotics. \char`\"{}\+Tenez\+Bot\char`\"{} package is a complete software package which will be integrated in their new line of products. Tennis is played widely throughout the world. Mastering this game requires a good amount of time. But with that comes the demanding task of collecting hundreds of tennis balls scattered across the court, which becomes really frustrating after a tiring practice session. Thus we are aiming to develop “\+Tenez\+Bot” a robot which can detect ball, its position in the environment, reach out to the ball and collect it in a sac using a custom made collector attached with the Turtle\+Bot base platform. The robot would use vision camera for vision and depth measurement. Path planning algorithms are used to reach out to the balls so that the task performance is optimum.
+
+\subsection*{Package Deliverables}
+
+This software package contains\+:
+
+
+\begin{DoxyEnumerate}
+\item Code Files
+\item Dependent Software Packages
+\item World file\+:
+\begin{DoxyEnumerate}
+\item Tennis Court World
+\item Empty World
+\end{DoxyEnumerate}
+\item Demo files\+:
+\begin{DoxyEnumerate}
+\item Bag file (Showing the simulation of robot collecting balls in the court)
+\item Visualization tools
+\item R\+QT Graphs
+\end{DoxyEnumerate}
+\item Instruction manual
+\begin{DoxyItemize}
+\item Building, Running, Tesing, Recording and Playing Instruction.
+\item Hardware Implementation Instructions.
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+\subsection*{Approach}
+
+The robot would perform the following steps to complete its task
+\begin{DoxyItemize}
+\item Sense the environment and use computer vision to detect the ball.
+\item Calculate the distance to the nearest Ball.
+\item Plan the path from the current position to the ball position coordinate.
+\item Reach the ball coordinate and collect the ball in sac.
+\item Calculate the distance to the other nearest Ball.
+\end{DoxyItemize}
+
+\subsection*{Project Demo}
+
+\subsection*{Agile Iterative Process (A\+IP)}
+
+
+\begin{DoxyItemize}
+\item \href{https://docs.google.com/document/d/1xD4v_xm90qUi-JRTBeB70zwtmSkE1hAyr0sW1udbbTA/edit?usp=sharing}{\tt Team Review Notes}
+\item \href{https://docs.google.com/spreadsheets/d/17ZCHpeQtKOI61sXRT4afAt2YDU3qQ2JU7icFp7B_i5g/edit?usp=sharing}{\tt A\+IP Spreadsheet}
+\end{DoxyItemize}
+
+\subsection*{Video Demo}
+
+
+\begin{DoxyItemize}
+\item Video Presentation\+: \mbox{[}link\mbox{]}()
+\item Presentation\+: \mbox{[}link\mbox{]}()
+\end{DoxyItemize}
+
+\subsection*{About the Developers}
+
+
+\begin{DoxyItemize}
+\item Achal Vyas (linkedin\+:\href{https://www.linkedin.com/in/achal-vyas-862a43146/}{\tt Achal Vyas})\+: A graduate student pursuing Masters in Robotics at the University of Maryland -\/ College Park. He is a part of Autonomous Micro Aerial Vehicles Team and has interests in Computer Vision and Machine Learning.
+\item Pruthvi Sanghavi (linkedin\+:\href{https://www.linkedin.com/in/pruthvi-sanghavi/}{\tt Pruthvi Sanghavi})\+: A graduate student pursuing Masters in Robotics at the University of Maryland College Park. He is interested in Reinforcement Learning and Dynamics.
+\end{DoxyItemize}
+
+\subsection*{Dependencies}
+
+In order to run the program you will need the following dependencies.
+\begin{DoxyItemize}
+\item Ubuntu Xenial (16.\+04) \href{http://releases.ubuntu.com/16.04/}{\tt click here to install}
+\item R\+OS Kinetic Kame \href{http://wiki.ros.org/kinetic/Installation/Ubuntu}{\tt click here to install}
+\item Open\+CV (To install follow the steps given below)
+\item Gazebo 7.\+X (Available as a part of R\+OS Full Desktop Version)
+\end{DoxyItemize}
+
+\subsubsection*{Install Open\+CV}
+
+
+\begin{DoxyItemize}
+\item To install open\+CV, copy and paste the below given command in the terminal... 
+\begin{DoxyCode}
+1 sudo apt-get update; sudo apt-get upgrade; sudo apt-get install build-essential cmake git libgtk2.0-dev
+       pkg-config libavcodec-dev libavformat-dev libswscale-dev; sudo apt-get install python3.5-dev python3-numpy
+       libtbb2 libtbb-dev; sudo apt-get install libopencv-dev libjpeg-dev libpng-dev libtiff5-dev libjasper-dev
+       libdc1394-22-dev libeigen3-dev libtheora-dev libvorbis-dev; libxvidcore-dev libx264-dev sphinx-common libtbb-dev
+       yasm libfaac-dev libopencore-amrnb-dev libopencore-amrwb-dev libopenexr-dev; libgstreamer-plugins-base1.0-dev
+       libavutil-dev libavfilter-dev libavresample-dev; sudo apt-get install git; git clone
+       https://github.com/opencv/opencv.git; cd opencv; mkdir build; cd build; cmake -D BUILD\_TIFF=ON -D WITH\_CUDA=OFF -D ENABLE\_AVX=OFF
+       -D WITH\_OPENGL=OFF -D WITH\_OPENCL=OFF -D WITH\_IPP=OFF -D WITH\_TBB=ON -D BUILD\_TBB=ON -D WITH\_EIGEN=OFF -D
+       WITH\_V4L=OFF -D WITH\_VTK=OFF -D BUILD\_TESTS=OFF -D BUILD\_PERF\_TESTS=OFF -D CMAKE\_BUILD\_TYPE=RELEASE -D
+       CMAKE\_INSTALL\_PREFIX=/usr/local -D OPENCV\_EXTRA\_MODULES\_PATH= ../ ../opencv\_contrib/modules ../; make -j4; sudo make
+       install; sudo ldconfig; sudo apt-get install python-opencv
+\end{DoxyCode}
+ To check whether Open\+CV is alive and kicking, type as given below. 
+\begin{DoxyCode}
+1 python
+2 import cv2
+3 print(cv2.\_\_version\_\_)
+4 ``` After the version gets printed, exit the python command line by typing
+\end{DoxyCode}
+ exit() 
+\begin{DoxyCode}
+1 ## ROS Dependencies
+2 
+3 
+4 
+5 
+6 
+7 
+8 ## Creating Workspace and Package
+9 
+10 Create a ROS Workspace by running the following commands. (Replace <workspace> with the workspace name of
+       your liking.)
+11 
+12 - Open a terminal
+\end{DoxyCode}
+ mkdir -\/p $\sim$/$<$workspace$>$/src cd $<$workspace$>$ catkin\+\_\+make source devel/setup.\+bash 
+\begin{DoxyCode}
+1 For creating the TenezBot Package, Run the following commands. 
+\end{DoxyCode}
+ cd src git clone \href{https://github.com/Pruthvi-Sanghavi/TenezBot}{\tt https\+://github.\+com/\+Pruthvi-\/\+Sanghavi/\+Tenez\+Bot} cd .. catkin\+\_\+make 
+\begin{DoxyCode}
+1 ## Running the Demo
+2 
+3 To run the demo, run the following commands in the terminal.
+4 
+5 - Open a terminal
+\end{DoxyCode}
+ cd $<$workspace$>$ source devel/setup.\+bash roslaunch tenezbot tenezbot.\+launch 
+\begin{DoxyCode}
+1 ## Bag file
+2 
+3 ### Recording the Bag file
+4 - A ros bag file records the topic and messages being published in the terminal. Run the following commands
+       in the terminal.
+\end{DoxyCode}
+ cd $<$workspace$>$ source devel/setup.\+bash roslaunch tenezbot tenezbot.\+launch record\+:=enable
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}
+1 The bag file is saved as tenezbot.bag in the results directory.
+2 
+3 ### Inspecting the bag file
+4 
+5 To get the information about the bag file, run the following the terminal.
+6 Open a terminal
+\end{DoxyCode}
+ cd $<$workspace$>$/src/tenezbot/results rosbag info tenezbot.\+bag
+
+
+\begin{DoxyCode}
+1 ### Playing the bag file
+2 
+3 In order to play a bag file, run the following commands in the terminal:
+4 
+5 Open a terminal
+\end{DoxyCode}
+ roscore 
+\begin{DoxyCode}
+1 Open a new terminal
+\end{DoxyCode}
+ cd $<$workspace$>$/src/tenezbot/results/ rosbag play tenezbot.\+bag 
+\begin{DoxyCode}
+1 ## Run Tests
+2 
+3 
+4 
+5 
+6 
+7 
+8 ## Code Coverage
+9 
+10 ![Code coverage](https://img.shields.io/badge/coverage-93.3%25-green.svg)
+11 
+12 (NOTE: THIS IS A SELF GENERATED TAG, not to be confused with the automatic generated tag from coveralls.)
+13 
+14 Since there is currently some issue with coveralls picking up the build from travis and checking for code
+       coverage, provided below is a screen shot of the coverage report generated using lcov, locally.
+15 For the Source Files, the Code Coverage Report is:
+16 ![code\_coverage](additional\_files/lcov\_coverage\_1.png)
+17 For the Test Files, the Code Coverage Report is:
+18 ![code\_coverage](additional\_files/lcov\_coverage\_2.png)
+19 
+20 To run code coverage, you need lcov package. If this package is not installed, then to install the package,
+       run the following command:
+\end{DoxyCode}
+ sudo apt-\/get install lcov 
+\begin{DoxyCode}
+1 To do so, run the following commands:
+\end{DoxyCode}
+ source $\sim$/catkin\+\_\+ws/devel/setup.bash roslaunch iiwa\+\_\+moveit moveit\+\_\+planning\+\_\+execution.\+launch 
+\begin{DoxyCode}
+1 You can still give the arguments to this launch file as stated in the "[Playing the bag
+       File](#playing-the-bag-file-generated-to-observe-robot-motion)" section.
+2 
+3 Now, in a new terminal, to generate code coverage, run the following command:
+\end{DoxyCode}
+ catkin\+\_\+make code\+\_\+coverage 
+\begin{DoxyCode}
+1 To view the code coverage report generated, run the following commands:
+\end{DoxyCode}
+ cd $\sim$/catkin\+\_\+ws/build/coverage/ firefox index.\+html 
+\begin{DoxyCode}
+1 ## Plugins
+2 
+3 ##### CppChEclipse
+4 
+5 If cppcheck package is not installed, then to install the package, run the following command:
+\end{DoxyCode}
+ sudo apt-\/get install cppcheck 
+\begin{DoxyCode}
+1 To run cppcheck in Terminal, run the following commands:
+\end{DoxyCode}
+ cd $\sim$/catkin\+\_\+ws/src/object\+\_\+collection\+\_\+robotic\+\_\+arm/ cppcheck --std=c++11 -\/I include/ --suppress=missing\+Include\+System \$(find . -\/name $\ast$.cpp -\/or -\/name $\ast$.hpp $\vert$ grep -\/vE -\/e \char`\"{}$^\wedge$./docs/\char`\"{} -\/e \char`\"{}$^\wedge$./launch/\char`\"{} -\/e \char`\"{}$^\wedge$./results/\char`\"{} -\/e \char`\"{}$^\wedge$./\+U\+M\+L/\char`\"{} -\/e \char`\"{}./world/\char`\"{}) 
+\begin{DoxyCode}
+1 ##### Google C++ Style
+2 
+3 If cpplint package is not installed, then to install the package, run the following command:
+\end{DoxyCode}
+ sudo apt-\/get install python-\/pip pip install cpplint 
+\begin{DoxyCode}
+1 To check Google C++ Style formatting in Terminal, run the following commands:
+\end{DoxyCode}
+ cd $\sim$/catkin\+\_\+ws/src/object\+\_\+collection\+\_\+robotic\+\_\+arm/ cpplint \$(find . -\/name $\ast$.cpp -\/or -\/name $\ast$.hpp $\vert$ grep -\/vE -\/e \char`\"{}$^\wedge$./docs/\char`\"{} -\/e \char`\"{}$^\wedge$./launch/\char`\"{} -\/e \char`\"{}$^\wedge$./results/\char`\"{} -\/e \char`\"{}$^\wedge$./\+U\+M\+L/\char`\"{} -\/e \char`\"{}./world/\char`\"{}) 
+\begin{DoxyCode}
+1 ## Generating Doxygen Documentation
+2 
+3 To install doxygen run the following command:
+\end{DoxyCode}
+ sudo apt install doxygen 
+\begin{DoxyCode}
+1 Now, to generate doxygen documentation, run the following commands:
+\end{DoxyCode}
+ cd $\sim$/catkin\+\_\+ws/src/object\+\_\+collection\+\_\+robotic\+\_\+arm/ doxygen doxconfig 
+\begin{DoxyCode}
+1 Doxygen files will be generated to /docs folder. To view them in a browser, run the following commands:
+\end{DoxyCode}
+ cd docs/html firefox index.\+html 
+\begin{DoxyCode}
+1 ## Known Issues/Bugs
+2 
+3 
+4 
+5 
+6 
+7 
+8 ## License 
+\end{DoxyCode}
+ B\+SD 3-\/\+Clause License
+
+Copyright (c) 2019, Pruthvikumar Sanghavi, Achal Vyas. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyItemize}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyItemize}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. ``` \subsection*{Disclaimer}

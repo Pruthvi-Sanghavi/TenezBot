@@ -1,0 +1,14 @@
+pruthvi@pruthvi:~/cpplint$ ./cpplint.py --recursive --extensions=cpp,hpp ~/w/src/TenezBot/
+Done processing /home/pruthvi/w/src/TenezBot/test/test_detect.cpp
+/home/pruthvi/w/src/TenezBot/include/turtlebot.hpp:72:  Is this a non-const reference? If so, make const or use a pointer: geometry_msgs::Twist &move  [runtime/references] [2]
+/home/pruthvi/w/src/TenezBot/include/turtlebot.hpp:73:  Is this a non-const reference? If so, make const or use a pointer: ros::Publisher &movement_pub  [runtime/references] [2]
+/home/pruthvi/w/src/TenezBot/include/turtlebot.hpp:73:  Is this a non-const reference? If so, make const or use a pointer: ros::Rate &rate  [runtime/references] [2]
+Done processing /home/pruthvi/w/src/TenezBot/include/turtlebot.hpp
+Done processing /home/pruthvi/w/src/TenezBot/src/balldetect.cpp
+Done processing /home/pruthvi/w/src/TenezBot/src/turtlebot.cpp
+Done processing /home/pruthvi/w/src/TenezBot/src/detect.cpp
+Done processing /home/pruthvi/w/src/TenezBot/src/motion_node.cpp
+Done processing /home/pruthvi/w/src/TenezBot/include/balldetect.hpp
+Done processing /home/pruthvi/w/src/TenezBot/test/test_navig.cpp
+Total errors found: 3
+
