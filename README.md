@@ -251,7 +251,8 @@ Then, rename the "config" file to "doxconfig".
 Now, to generate doxygen documentation, run the following commands:
 
 ```
-cd ~/catkin_ws/src/object_collection_robotic_arm/
+cd ~/catkin_ws/src/TenezBot/
+doxygen -g
 doxygen doxconfig
 ```
 Doxygen files will be generated to /docs folder. To view them in a browser, run the following commands:
