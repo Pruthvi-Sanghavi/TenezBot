@@ -167,7 +167,7 @@ sudo apt-get install cppcheck
 ```
 To run cppcheck in Terminal, run the following commands:
 ```
-cd ~/catkin_ws/src/object_collection_robotic_arm/
+cd ~/<workspace>/src/TenezBot
 cppcheck --std=c++11 -I include/ --suppress=missingIncludeSystem $(find . -name \*.cpp -or -name \*.hpp | grep -vE -e "^./docs/" -e "^./launch/" -e "^./results/" -e "^./UML/" -e "./world/")
 ```
 
@@ -180,7 +180,7 @@ pip install cpplint
 ```
 To check Google C++ Style formatting in Terminal, run the following commands:
 ```
-cd ~/catkin_ws/src/object_collection_robotic_arm/
+cd ~/<workspace>/src/TenezBot
 cpplint $(find . -name \*.cpp -or -name \*.hpp | grep -vE -e "^./docs/" -e "^./launch/" -e "^./results/" -e "^./UML/" -e "./world/")
 ```
 
@@ -192,7 +192,7 @@ To install doxygen run the following command:
 sudo apt install doxygen
 ```
 <!-- 
-cd ~/catkin_ws/src/object_collection_robotic_arm/
+cd ~/<workspace>/src/TenezBot
 mkdir docs
 doxygen -g config
 ```
