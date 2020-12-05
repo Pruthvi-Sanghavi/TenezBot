@@ -47,9 +47,7 @@ The robot would perform the following steps to complete its task
 - Video Presentation: [link](https://drive.google.com/open?id=16ZPN-cC5ia5kIT59fHRLWBl1iRF6Wc8J)
 - Presentation: [link](https://drive.google.com/open?id=155_GFJH2JAP7qsZj5m145zeNFpTQVBx8teyoY8T2POA)
 
-## About the Developers
-
-- Achal Vyas (linkedin:[Achal Vyas](https://www.linkedin.com/in/achal-vyas-862a43146/)): A graduate student pursuing Masters in Robotics at the University of Maryland - College Park. He is a part of Autonomous Micro Aerial Vehicles Team and has interests in Computer Vision and Machine Learning. 
+## About the Developer
 
 - Pruthvi Sanghavi (linkedin:[Pruthvi Sanghavi](https://www.linkedin.com/in/pruthvi-sanghavi/)): A graduate student pursuing Masters in Robotics at the University of Maryland College Park. He is interested in Reinforcement Learning and Dynamics.
 
